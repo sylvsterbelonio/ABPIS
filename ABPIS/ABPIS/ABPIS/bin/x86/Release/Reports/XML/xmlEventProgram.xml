@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<xs:schema id="dsEvent" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+   <xs:element name="dsEvent" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+       <xs:complexType>
+           <xs:choice minOccurs="0" maxOccurs="unbounded">
+               <xs:element name="tblDetails">
+                   <xs:complexType>
+                       <xs:sequence>
+                       <xs:element name="district" type="xs:string" minOccurs="0" />
+                       <xs:element name="leaders" type="xs:string" minOccurs="0" />
+                       <xs:element name="members" type="xs:string" minOccurs="0" />
+                       </xs:sequence>
+                   </xs:complexType>
+               </xs:element>
+           </xs:choice>
+       </xs:complexType>
+   </xs:element>
+</xs:schema>

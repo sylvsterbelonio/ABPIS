@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<xs:schema id="dsMemberList" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+   <xs:element name="dsMemberList" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+       <xs:complexType>
+           <xs:choice minOccurs="0" maxOccurs="unbounded">
+               <xs:element name="tblDetails">
+                   <xs:complexType>
+                       <xs:sequence>
+                       <xs:element name="lastname" type="xs:string" minOccurs="0" />
+                       <xs:element name="firstname" type="xs:string" minOccurs="0" />
+                       <xs:element name="middlename" type="xs:string" minOccurs="0" />
+                       <xs:element name="address" type="xs:string" minOccurs="0" />
+                       <xs:element name="contactNo" type="xs:string" minOccurs="0" />
+                       <xs:element name="age" type="xs:string" minOccurs="0" />
+                       </xs:sequence>
+                   </xs:complexType>
+               </xs:element>
+           </xs:choice>
+       </xs:complexType>
+   </xs:element>
+</xs:schema>

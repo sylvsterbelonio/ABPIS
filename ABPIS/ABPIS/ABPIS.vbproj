@@ -1,0 +1,518 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0CDF2BA7-FA90-47D4-828E-532251DEA4F6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ABPIS.modMain</StartupObject>
+    <RootNamespace>ABPIS</RootNamespace>
+    <AssemblyName>ABPIS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Console</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ABPIS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ABPIS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>ABPIS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>ABPIS.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Windows\assembly\GAC_MSIL\CrystalDecisions.CrystalReports.Engine\10.5.3700.0__692fbea5521e1304\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Windows\assembly\GAC_MSIL\CrystalDecisions.ReportSource\10.5.3700.0__692fbea5521e1304\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Windows\assembly\GAC_MSIL\CrystalDecisions.Shared\10.5.3700.0__692fbea5521e1304\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Shared.v7.3, Version=7.3.20073.38, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics2.Win.UltraWinEditors.v7.3, Version=7.3.20073.38, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics2.Win.UltraWinTabControl.v7.3, Version=7.3.20073.38, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics2.Win.v7.3, Version=7.3.20073.38, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="MySql.Data, Version=5.2.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" />
+    <Reference Include="Power .NET 8, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Power .Net 8\Power .NET 8\Custom Objects 8\bin\x86\Debug\Power .NET 8.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\clsObjects.vb" />
+    <Compile Include="Classes\clsSystemSkin.vb" />
+    <Compile Include="Forms\frmActivitesFinder.Designer.vb">
+      <DependentUpon>frmActivitesFinder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmActivitesFinder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmActivities.Designer.vb">
+      <DependentUpon>frmActivities.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmActivities.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmActivitiesCoursesChaptersFinder.Designer.vb">
+      <DependentUpon>frmActivitiesCoursesChaptersFinder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmActivitiesCoursesChaptersFinder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmContributionReport.Designer.vb">
+      <DependentUpon>frmContributionReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmContributionReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEventsAttendance.Designer.vb">
+      <DependentUpon>frmEventsAttendance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEventsAttendance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmContribution.Designer.vb">
+      <DependentUpon>frmContribution.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmContribution.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmContributionFinder.Designer.vb">
+      <DependentUpon>frmContributionFinder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmContributionFinder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCourseTalk.Designer.vb">
+      <DependentUpon>frmCourseTalk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCourseTalk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDistricts.Designer.vb">
+      <DependentUpon>frmDistricts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDistricts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDistrictsFinder.Designer.vb">
+      <DependentUpon>frmDistrictsFinder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDistrictsFinder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEvents.Designer.vb">
+      <DependentUpon>frmEvents.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEvents.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEventsFinder.Designer.vb">
+      <DependentUpon>frmEventsFinder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEventsFinder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGroup.Designer.vb">
+      <DependentUpon>frmGroup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmGroup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGroupFinder.Designer.vb">
+      <DependentUpon>frmGroupFinder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmGroupFinder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLogIn.Designer.vb">
+      <DependentUpon>frmLogIn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLogIn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNewsLetter.Designer.vb">
+      <DependentUpon>frmNewsLetter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmNewsLetter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNewsLetterFinder.Designer.vb">
+      <DependentUpon>frmNewsLetterFinder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmNewsLetterFinder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmORMemberSummary.Designer.vb">
+      <DependentUpon>frmORMemberSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmORMemberSummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProfile.Designer.vb">
+      <DependentUpon>frmProfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProfileFinder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProfileFinder.Designer.vb">
+      <DependentUpon>frmProfileFinder.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProfilePicker.Designer.vb">
+      <DependentUpon>frmProfilePicker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProfilePicker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReport.Designer.vb">
+      <DependentUpon>frmReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSignUp.Designer.vb">
+      <DependentUpon>frmSignUp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSignUp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUserManagementFinder.Designer.vb">
+      <DependentUpon>frmUserManagementFinder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUserManagementFinder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\modMain.vb" />
+    <Compile Include="Modules\modPublic.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\frmActivitesFinder.resx">
+      <DependentUpon>frmActivitesFinder.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmActivities.resx">
+      <DependentUpon>frmActivities.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmActivitiesCoursesChaptersFinder.resx">
+      <DependentUpon>frmActivitiesCoursesChaptersFinder.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmContribution.resx">
+      <DependentUpon>frmContribution.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmContributionFinder.resx">
+      <DependentUpon>frmContributionFinder.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmContributionReport.resx">
+      <DependentUpon>frmContributionReport.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCourseTalk.resx">
+      <DependentUpon>frmCourseTalk.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDistricts.resx">
+      <DependentUpon>frmDistricts.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDistrictsFinder.resx">
+      <DependentUpon>frmDistrictsFinder.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEvents.resx">
+      <DependentUpon>frmEvents.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEventsAttendance.resx">
+      <DependentUpon>frmEventsAttendance.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEventsFinder.resx">
+      <DependentUpon>frmEventsFinder.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmGroup.resx">
+      <DependentUpon>frmGroup.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmGroupFinder.resx">
+      <DependentUpon>frmGroupFinder.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLogIn.resx">
+      <DependentUpon>frmLogIn.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmNewsLetter.resx">
+      <DependentUpon>frmNewsLetter.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmNewsLetterFinder.resx">
+      <DependentUpon>frmNewsLetterFinder.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmORMemberSummary.resx">
+      <DependentUpon>frmORMemberSummary.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProfile.resx">
+      <DependentUpon>frmProfile.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProfileFinder.resx">
+      <DependentUpon>frmProfileFinder.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProfilePicker.resx">
+      <DependentUpon>frmProfilePicker.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReport.resx">
+      <DependentUpon>frmReport.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSignUp.resx">
+      <DependentUpon>frmSignUp.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUserManagementFinder.resx">
+      <DependentUpon>frmUserManagementFinder.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carbon-fiber2dark-blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1771800.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1436083425_Close-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1436083425_Close-64 highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1436083425_Close-64 highlight2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Text Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\write.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dialog_cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\erase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer-1-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile_icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile_icon1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cipg_SPASHSCREEN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1437561088_User Info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-Group-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-Group-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book-Blank-Book-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\navy_blue_diagonal_bricks_pattern.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Letter-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Location-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apps-Icon-Template-File-B-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\custom-reports-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Welcome %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Christmas-image-christmas-36118465-1920-1200.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attendance.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
